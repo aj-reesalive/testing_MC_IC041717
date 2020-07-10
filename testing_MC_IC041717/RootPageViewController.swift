@@ -16,7 +16,7 @@ class RootPageViewController: UIPageViewController, UIPageViewControllerDataSour
     //lazy b/c we won't know ahead of time view hasn't completely loaded
     lazy var vcArray: [UIViewController] = {
         
-        let storyBoard = UIStoryboard(name: "main", bundle: nil) //main is from deployment info/main interface
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil) //main is from deployment info/main interface
         
         let camVC = storyBoard.instantiateViewController(identifier: "CamVC")
         let appVC = storyBoard.instantiateViewController(identifier: "AppVC")
