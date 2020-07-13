@@ -63,7 +63,7 @@
         <!--Signup-->
         <scene sceneID="Lx0-Yo-xlB">
             <objects>
-                <viewController restorationIdentifier="SignupVC" storyboardIdentifier="SignupVC" title="Signup" id="hl8-qr-hLB" sceneMemberID="viewController">
+                <viewController restorationIdentifier="SignupVC" storyboardIdentifier="SignupVC" title="Signup" id="hl8-qr-hLB" customClass="SignupViewController" customModule="testing_MC_IC041717" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cye-bD-i7k">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,7 +78,7 @@
                                 <rect key="frame" x="74" y="445" width="276" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ax-ou-zrw">
                                 <rect key="frame" x="74" y="520" width="276" height="30"/>
@@ -87,6 +87,9 @@
                                 <state key="normal" title="Signup">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="signupBtn:" destination="hl8-qr-hLB" eventType="touchUpInside" id="LiL-2u-ixx"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reesa" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pra-6b-tIp">
                                 <rect key="frame" x="74" y="224" width="276" height="73"/>
@@ -99,6 +102,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="j50-lB-QWH"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="Mhr-fA-ep5" id="yZq-PB-mib"/>
+                        <outlet property="passwordTextField" destination="3BA-RV-NQf" id="R8Y-hd-e06"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cYZ-Iy-Zq9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
