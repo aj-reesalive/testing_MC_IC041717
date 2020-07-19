@@ -127,7 +127,7 @@
         <!--Login View Controller-->
         <scene sceneID="udO-im-v1s">
             <objects>
-                <viewController restorationIdentifier="LoginVC" storyboardIdentifier="LoginVC" title="Login View Controller" id="HnP-mr-6ya" sceneMemberID="viewController">
+                <viewController restorationIdentifier="LoginVC" storyboardIdentifier="LoginVC" title="Login View Controller" id="HnP-mr-6ya" customClass="LoginViewController" customModule="testing_MC_IC041717" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F9A-ot-IMO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
