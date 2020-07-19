@@ -150,6 +150,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
+                                    <action selector="loginBtn:" destination="HnP-mr-6ya" eventType="touchUpInside" id="K0T-2q-0DB"/>
                                     <action selector="signupBtn:" destination="hl8-qr-hLB" eventType="touchUpInside" id="xfX-rH-CQG"/>
                                 </connections>
                             </button>
@@ -165,36 +166,46 @@
                                     <segue destination="hl8-qr-hLB" kind="show" id="nU0-23-XsP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2xH-d6-Vzw">
-                                <rect key="frame" x="66" y="433" width="243" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yos-kq-0Cn" customClass="GIDSignInButton">
+                                <rect key="frame" x="66" y="433" width="243" height="42"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <action selector="googleSigninBtn:" destination="HnP-mr-6ya" eventType="valueChanged" id="NRo-GS-zvf"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="qqO-em-D9k" firstAttribute="top" secondItem="ego-5I-wlE" secondAttribute="bottom" constant="25" id="2sD-B4-JVm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="H8z-3R-NbG" secondAttribute="trailing" constant="50" id="5eF-IC-iSH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Yos-kq-0Cn" secondAttribute="trailing" constant="50" id="AeX-FZ-yW8"/>
                             <constraint firstItem="ego-5I-wlE" firstAttribute="top" secondItem="H8z-3R-NbG" secondAttribute="bottom" constant="25" id="GGy-R8-jy5"/>
-                            <constraint firstItem="2xH-d6-Vzw" firstAttribute="top" secondItem="qqO-em-D9k" secondAttribute="bottom" constant="25" id="J1j-xF-35z"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HOH-wL-ewK" secondAttribute="trailing" constant="50" id="Kz1-aG-oni"/>
                             <constraint firstItem="fDM-ag-uEh" firstAttribute="leading" secondItem="F9A-ot-IMO" secondAttribute="leadingMargin" constant="100" id="M97-xj-Etl"/>
                             <constraint firstItem="HOH-wL-ewK" firstAttribute="top" secondItem="F9A-ot-IMO" secondAttribute="topMargin" constant="150" id="MrU-VH-1fT"/>
                             <constraint firstItem="qqO-em-D9k" firstAttribute="leading" secondItem="F9A-ot-IMO" secondAttribute="leadingMargin" constant="50" id="Pq9-0w-iwB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fDM-ag-uEh" secondAttribute="trailing" constant="100" id="QEi-RN-ybF"/>
                             <constraint firstItem="HOH-wL-ewK" firstAttribute="leading" secondItem="F9A-ot-IMO" secondAttribute="leadingMargin" constant="50" id="QMz-7p-XVg"/>
+                            <constraint firstItem="Yos-kq-0Cn" firstAttribute="leading" secondItem="F9A-ot-IMO" secondAttribute="leadingMargin" constant="50" id="ToA-qs-gwu"/>
                             <constraint firstItem="H8z-3R-NbG" firstAttribute="top" secondItem="HOH-wL-ewK" secondAttribute="bottom" constant="50" id="XoY-F6-cE1"/>
                             <constraint firstItem="H8z-3R-NbG" firstAttribute="leading" secondItem="F9A-ot-IMO" secondAttribute="leadingMargin" constant="50" id="aaC-Fm-atm"/>
                             <constraint firstItem="ego-5I-wlE" firstAttribute="top" secondItem="H8z-3R-NbG" secondAttribute="bottom" constant="25" id="gjy-q7-0bn"/>
                             <constraint firstItem="9nE-F7-TvJ" firstAttribute="bottom" secondItem="fDM-ag-uEh" secondAttribute="bottom" constant="30" id="gvW-Y2-rCM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ego-5I-wlE" secondAttribute="trailing" constant="50" id="mRs-xw-1XZ"/>
-                            <constraint firstItem="2xH-d6-Vzw" firstAttribute="leading" secondItem="F9A-ot-IMO" secondAttribute="leadingMargin" constant="50" id="pMR-Ju-0og"/>
                             <constraint firstItem="qqO-em-D9k" firstAttribute="top" secondItem="ego-5I-wlE" secondAttribute="bottom" constant="25" id="sa8-R3-voK"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="2xH-d6-Vzw" secondAttribute="trailing" constant="50" id="uDb-xa-6sM"/>
+                            <constraint firstItem="fDM-ag-uEh" firstAttribute="top" secondItem="Yos-kq-0Cn" secondAttribute="bottom" constant="132" id="vYj-bu-Ufb"/>
                             <constraint firstItem="ego-5I-wlE" firstAttribute="leading" secondItem="F9A-ot-IMO" secondAttribute="leadingMargin" constant="50" id="vZa-tk-PjJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="qqO-em-D9k" secondAttribute="trailing" constant="50" id="vki-oB-MUg"/>
+                            <constraint firstItem="Yos-kq-0Cn" firstAttribute="top" secondItem="qqO-em-D9k" secondAttribute="bottom" constant="25" id="wdK-di-1sA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9nE-F7-TvJ"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="H8z-3R-NbG" id="H1L-9l-rgi"/>
+                        <outlet property="googleSigninBtn" destination="Yos-kq-0Cn" id="PeV-7i-f0q"/>
+                        <outlet property="loginBtn" destination="qqO-em-D9k" id="5wG-iU-QqZ"/>
+                        <outlet property="passwordTextField" destination="ego-5I-wlE" id="VoE-49-MEe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="erh-gm-yEh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
