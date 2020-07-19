@@ -109,6 +109,7 @@
 				218A25A324B7F3C900A0F9B2 /* Frameworks */,
 				218A25A424B7F3C900A0F9B2 /* Resources */,
 				7C5DA91906B25DEAB3263538 /* [CP] Embed Pods Frameworks */,
+				B90B9B79003EEFB41C649699 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -204,6 +205,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-testing_MC_IC041717/Pods-testing_MC_IC041717-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B90B9B79003EEFB41C649699 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-testing_MC_IC041717/Pods-testing_MC_IC041717-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-testing_MC_IC041717/Pods-testing_MC_IC041717-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-testing_MC_IC041717/Pods-testing_MC_IC041717-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
