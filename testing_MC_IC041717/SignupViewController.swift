@@ -12,6 +12,7 @@ import Firebase
 
 class SignupViewController: UIViewController {
     
+    var databaseRef: DatabaseReference!
     
     @IBOutlet weak var emailTextField: UITextField!
     
@@ -19,20 +20,49 @@ class SignupViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        databaseRef = Database.database().reference()
 
         // Do any additional setup after loading the view.
     }
     
-    func signup(){
-        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: { (user, error) in
-            
+    func signup(email: String, password:String){
+        
+        
+        
+        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: { (authResult, error) in
+
             if error != nil {
                 print(error!)
-            } else {
+                return
+                
+            }else {
+                
+                let result = authResult!
+                self.createProfile(result.user)
                 let homePVC = RootPageViewController()
                 self.present(homePVC, animated: true, completion: nil)
             }
         })
+    }
+    
+    func createProfile(_ user: User){
+        let delimiter = "@"
+        let email = user.email
+        let uName = email?.components(separatedBy: delimiter)
+        
+        let newUser = ["username": uName?[0],
+                       "email": user.email,
+                       "photo":"https://firebasestorage.googleapis.com/v0/b/reesa-login-swiftfirebase.appspot.com/o/504-5040528_empty-profile-picture-png-transparent-png.png?alt=media&token=5b26878e-e868-46aa-9c3e-9af86bbda332"] as [String : Any]
+        
+        self.databaseRef.child("profile").child(user.uid).updateChildValues(newUser){ (error, ref) in
+            if error != nil {
+                print(error!)
+                return
+            }
+            print("Profile sucessfully created")
+        }
+        
     }
     
     func setupProfile(){
@@ -40,6 +70,7 @@ class SignupViewController: UIViewController {
     }
 
     @IBAction func signupBtn(_ sender: Any) {
-        signup()
+        guard let email = emailTextField.text, let password = passwordTextField.text else {return}
+        signup(email: email, password: password)
     }
 }

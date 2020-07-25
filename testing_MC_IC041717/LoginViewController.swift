@@ -31,7 +31,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         if Auth.auth().currentUser?.uid != nil {
-            goToHome()
+            //goToHome()
         }
     }
     
