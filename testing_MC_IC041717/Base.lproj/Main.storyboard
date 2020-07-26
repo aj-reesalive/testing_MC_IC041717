@@ -45,10 +45,10 @@
             </objects>
             <point key="canvasLocation" x="1349" y="460"/>
         </scene>
-        <!--Item 2-->
+        <!--Profile-->
         <scene sceneID="lzl-jO-6PM">
             <objects>
-                <viewController id="4po-zX-zVo" sceneMemberID="viewController">
+                <viewController id="4po-zX-zVo" customClass="ProfileViewController" customModule="testing_MC_IC041717" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2tZ-0V-Mr9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -138,7 +138,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="k2I-It-vVi"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="l0p-lb-hah"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="l0p-lb-hah"/>
+                    <connections>
+                        <outlet property="displayNameText" destination="0WN-el-e7x" id="DTM-5Z-w4H"/>
+                        <outlet property="profileImageView" destination="UM9-Hc-7mx" id="IhO-fL-yut"/>
+                        <outlet property="usernameText" destination="gPx-ey-Dhs" id="9gJ-Q7-KAS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J7y-5X-Nvf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -330,4 +335,7 @@
             <point key="canvasLocation" x="-802.39999999999998" y="40.929535232383813"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+    </resources>
 </document>

@@ -30,7 +30,7 @@ class SignupViewController: UIViewController {
         
         
         
-        Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!, completion: { (authResult, error) in
+        Auth.auth().createUser(withEmail: email, password: password, completion: { (authResult, error) in
 
             if error != nil {
                 print(error!)

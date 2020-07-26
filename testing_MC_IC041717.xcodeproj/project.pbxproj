@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2141FC4624B8282900CF3170 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2141FC4524B8282900CF3170 /* GoogleService-Info.plist */; };
+		21440ADF24CD0808007C80E3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21440ADE24CD0808007C80E3 /* ProfileViewController.swift */; };
 		216F4F4024B824C800516AE9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216F4F3F24B824C800516AE9 /* SceneDelegate.swift */; };
 		218A25AA24B7F3C900A0F9B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218A25A924B7F3C900A0F9B2 /* AppDelegate.swift */; };
 		218A25B124B7F3C900A0F9B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 218A25AF24B7F3C900A0F9B2 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 
 /* Begin PBXFileReference section */
 		2141FC4524B8282900CF3170 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		21440ADE24CD0808007C80E3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		216F4F3F24B824C800516AE9 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		218A25A624B7F3C900A0F9B2 /* testing_MC_IC041717.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testing_MC_IC041717.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		218A25A924B7F3C900A0F9B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				216F4F3F24B824C800516AE9 /* SceneDelegate.swift */,
 				21A5E60624BBBC830081E000 /* SignupViewController.swift */,
 				21A09C6324C419DE009A3846 /* LoginViewController.swift */,
+				21440ADE24CD0808007C80E3 /* ProfileViewController.swift */,
 				218A25AF24B7F3C900A0F9B2 /* Main.storyboard */,
 				218A25B224B7F3CB00A0F9B2 /* Assets.xcassets */,
 				218A25B424B7F3CB00A0F9B2 /* LaunchScreen.storyboard */,
@@ -234,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21440ADF24CD0808007C80E3 /* ProfileViewController.swift in Sources */,
 				218A25BE24B7F4AA00A0F9B2 /* RootPageViewController.swift in Sources */,
 				218A25AA24B7F3C900A0F9B2 /* AppDelegate.swift in Sources */,
 				21A5E60724BBBC830081E000 /* SignupViewController.swift in Sources */,
