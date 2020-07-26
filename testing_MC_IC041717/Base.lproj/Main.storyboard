@@ -70,24 +70,28 @@
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="gPx-ey-Dhs" secondAttribute="bottom" constant="14" id="Ej5-nF-4H0"/>
                                             <constraint firstItem="gPx-ey-Dhs" firstAttribute="leading" secondItem="QVj-D9-NIs" secondAttribute="leading" constant="8" id="FlN-SU-4MG"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gPx-ey-Dhs" secondAttribute="trailing" constant="20" symbolic="YES" id="Gi2-CX-91z"/>
                                             <constraint firstItem="gPx-ey-Dhs" firstAttribute="top" secondItem="QVj-D9-NIs" secondAttribute="top" constant="15" id="HpK-4G-21i"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5b6-U7-Sg2">
                                         <rect key="frame" x="0.0" y="52" width="375" height="120"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UM9-Hc-7mx">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UM9-Hc-7mx">
                                                 <rect key="frame" x="8" y="8" width="82" height="71"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="82" id="fnB-Us-yoN"/>
+                                                    <constraint firstAttribute="height" constant="71" id="iNc-Lb-xJT"/>
+                                                </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0WN-el-e7x">
-                                                <rect key="frame" x="8" y="87" width="359" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0WN-el-e7x">
+                                                <rect key="frame" x="8" y="87" width="359" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eeg-h8-4R4">
-                                                <rect key="frame" x="105" y="49" width="262" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eeg-h8-4R4">
+                                                <rect key="frame" x="115" y="49" width="252" height="30"/>
                                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Edit your profile">
                                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -99,8 +103,11 @@
                                             <constraint firstItem="UM9-Hc-7mx" firstAttribute="top" secondItem="5b6-U7-Sg2" secondAttribute="top" constant="8" id="E4P-3m-OpC"/>
                                             <constraint firstItem="0WN-el-e7x" firstAttribute="leading" secondItem="5b6-U7-Sg2" secondAttribute="leading" constant="8" id="Los-mD-HlM"/>
                                             <constraint firstAttribute="trailing" secondItem="0WN-el-e7x" secondAttribute="trailing" constant="8" id="Lwc-Yk-XC5"/>
+                                            <constraint firstItem="Eeg-h8-4R4" firstAttribute="leading" secondItem="UM9-Hc-7mx" secondAttribute="trailing" constant="25" id="NUK-ic-Ogv"/>
+                                            <constraint firstAttribute="trailing" secondItem="Eeg-h8-4R4" secondAttribute="trailing" constant="8" id="SB6-9r-bzY"/>
                                             <constraint firstItem="UM9-Hc-7mx" firstAttribute="leading" secondItem="5b6-U7-Sg2" secondAttribute="leading" constant="8" id="THc-JV-2PE"/>
                                             <constraint firstItem="0WN-el-e7x" firstAttribute="top" secondItem="UM9-Hc-7mx" secondAttribute="bottom" constant="8" id="Ye5-5y-QYJ"/>
+                                            <constraint firstItem="UM9-Hc-7mx" firstAttribute="bottom" secondItem="Eeg-h8-4R4" secondAttribute="bottom" id="pel-hb-W3w"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bSO-T9-6ch">
